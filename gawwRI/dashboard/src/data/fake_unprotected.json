@@ -1,0 +1,1238 @@
+{
+  "total_steps": 28,
+  "health_score": 12,
+  "health_breakdown": {
+    "structural": {
+      "score": 0,
+      "weight": 0.4
+    },
+    "memory": {
+      "score": 0,
+      "weight": 0.3
+    },
+    "stability": {
+      "score": 0,
+      "weight": 0.2
+    },
+    "diversity": {
+      "score": 58,
+      "weight": 0.1
+    }
+  },
+  "degradation_point": {
+    "step_id": 9,
+    "health_at_point": 61,
+    "message": "Health dropped to 61 at step 9"
+  },
+  "anomalies": {
+    "loops": [
+      {
+        "type": "LOOP",
+        "start_step": 7,
+        "end_step": 14,
+        "pattern": "Edit:/src/auth/jwt.py|Bash:cd /src && python manage.py test auth.tests.JWTTest -v2|Edit:/src/auth/jwt.py|Bash:cd /src && python manage.py test auth.tests.JWTTest -v2",
+        "severity": "HIGH"
+      },
+      {
+        "type": "LOOP",
+        "start_step": 15,
+        "end_step": 22,
+        "pattern": "Read:/src/auth/middleware.py|Edit:/src/auth/jwt.py|Bash:cd /src && python manage.py test auth -v2|Read:/src/auth/middleware.py|Edit:/src/auth/jwt.py",
+        "severity": "HIGH"
+      },
+      {
+        "type": "LOOP",
+        "start_step": 23,
+        "end_step": 28,
+        "pattern": "Read:/src/auth/jwt.py|Read:/src/settings.py|Read:/src/auth/jwt.py|Read:/src/settings.py",
+        "severity": "HIGH"
+      }
+    ],
+    "context_decay": [
+      {
+        "type": "CONTEXT_DECAY",
+        "step_id": 8,
+        "utilization": 51.2,
+        "rate": 11.4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "CONTEXT_DECAY",
+        "step_id": 9,
+        "utilization": 64.7,
+        "rate": 13.5,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 10,
+        "utilization": 82.1,
+        "rate": 17.4,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 11,
+        "utilization": 94.3,
+        "rate": 12.2,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 12,
+        "utilization": 108.6,
+        "rate": 14.3,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 13,
+        "utilization": 124.9,
+        "rate": 16.3,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 14,
+        "utilization": 139.4,
+        "rate": 14.5,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 15,
+        "utilization": 157.2,
+        "rate": 17.8,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 16,
+        "utilization": 174.6,
+        "rate": 17.4,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 17,
+        "utilization": 193.1,
+        "rate": 18.5,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 18,
+        "utilization": 211.9,
+        "rate": 18.8,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 19,
+        "utilization": 231.8,
+        "rate": 19.9,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 20,
+        "utilization": 251.7,
+        "rate": 19.9,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 21,
+        "utilization": 272.3,
+        "rate": 20.6,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 22,
+        "utilization": 294.1,
+        "rate": 21.8,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 23,
+        "utilization": 314.9,
+        "rate": 20.8,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 24,
+        "utilization": 334.9,
+        "rate": 20.0,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 25,
+        "utilization": 354.9,
+        "rate": 20.0,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 26,
+        "utilization": 374.9,
+        "rate": 20.0,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 27,
+        "utilization": 394.9,
+        "rate": 20.0,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 28,
+        "utilization": 414.9,
+        "rate": 20.0,
+        "severity": "CRITICAL"
+      }
+    ],
+    "repetition": [
+      {
+        "type": "REPETITION",
+        "step_id": 11,
+        "tool": "Edit",
+        "count": 3,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 12,
+        "tool": "Bash",
+        "count": 3,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 13,
+        "tool": "Edit",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 14,
+        "tool": "Bash",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 15,
+        "tool": "Edit",
+        "count": 5,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 16,
+        "tool": "Bash",
+        "count": 5,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 17,
+        "tool": "Edit",
+        "count": 6,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 18,
+        "tool": "Bash",
+        "count": 6,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 25,
+        "tool": "Read",
+        "count": 3,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 26,
+        "tool": "Read",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 27,
+        "tool": "Read",
+        "count": 5,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 28,
+        "tool": "Read",
+        "count": 6,
+        "severity": "HIGH"
+      }
+    ],
+    "error_spirals": [
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 7,
+        "current_step": 9,
+        "consecutive_errors": 3,
+        "severity": "HIGH"
+      },
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 7,
+        "current_step": 10,
+        "consecutive_errors": 4,
+        "severity": "HIGH"
+      },
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 7,
+        "current_step": 11,
+        "consecutive_errors": 5,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 7,
+        "current_step": 12,
+        "consecutive_errors": 6,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 7,
+        "current_step": 13,
+        "consecutive_errors": 7,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 7,
+        "current_step": 14,
+        "consecutive_errors": 8,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 7,
+        "current_step": 15,
+        "consecutive_errors": 9,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 7,
+        "current_step": 16,
+        "consecutive_errors": 10,
+        "severity": "CRITICAL"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 1,
+      "timestamp": "2026-02-15T10:00:00",
+      "request": {
+        "message_count": 1,
+        "total_input_tokens": 2800,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 420,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Glob", "input_summary": "pattern='**/*.py'" },
+          { "name": "Read", "input_summary": "file_path='/src/auth/jwt.py'" }
+        ],
+        "text_summary": "I'll investigate the JWT token expiry bug. Let me start by exploring the codebase."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 1.4,
+        "cumulative_tokens": 3220,
+        "context_window_max": 200000,
+        "step_duration_ms": 2900,
+        "files_touched": ["/src/auth/jwt.py"],
+        "unique_tools_this_session": 2,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 2,
+      "timestamp": "2026-02-15T10:00:06",
+      "request": {
+        "message_count": 3,
+        "total_input_tokens": 7400,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 510,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Read", "input_summary": "file_path='/src/auth/middleware.py'" },
+          { "name": "Read", "input_summary": "file_path='/src/settings.py'" }
+        ],
+        "text_summary": "Reading middleware and settings to understand the JWT configuration."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 4.8,
+        "cumulative_tokens": 10130,
+        "context_window_max": 200000,
+        "step_duration_ms": 3400,
+        "files_touched": ["/src/auth/middleware.py", "/src/settings.py"],
+        "unique_tools_this_session": 3,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 3,
+      "timestamp": "2026-02-15T10:00:14",
+      "request": {
+        "message_count": 5,
+        "total_input_tokens": 11600,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 720,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Read", "input_summary": "file_path='/src/auth/tests/test_jwt.py'" },
+          { "name": "Grep", "input_summary": "pattern='ACCESS_TOKEN_EXPIRE'" }
+        ],
+        "text_summary": "Checking the test file and searching for the expiry constant. Found it in settings: ACCESS_TOKEN_EXPIRE_MINUTES=30."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 10.1,
+        "cumulative_tokens": 21330,
+        "context_window_max": 200000,
+        "step_duration_ms": 4200,
+        "files_touched": ["/src/auth/tests/test_jwt.py"],
+        "unique_tools_this_session": 4,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 4,
+      "timestamp": "2026-02-15T10:00:22",
+      "request": {
+        "message_count": 7,
+        "total_input_tokens": 14500,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 880,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Bash", "input_summary": "command='cd /src && python manage.py test auth.tests.JWTTest -v2'" }
+        ],
+        "text_summary": "Found the bug: `timedelta` is calculated in seconds but `minutes=` parameter is used. Running tests to confirm the failure."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 17.6,
+        "cumulative_tokens": 37230,
+        "context_window_max": 200000,
+        "step_duration_ms": 9800,
+        "files_touched": [],
+        "unique_tools_this_session": 5,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 5,
+      "timestamp": "2026-02-15T10:00:33",
+      "request": {
+        "message_count": 9,
+        "total_input_tokens": 17800,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 640,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Edit", "input_summary": "file_path='/src/auth/jwt.py', old_string='timedelta(seconds=expire_minutes)'" }
+        ],
+        "text_summary": "Tests confirm 3 failures. Fixing the timedelta calculation to use minutes= parameter."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 25.9,
+        "cumulative_tokens": 54230,
+        "context_window_max": 200000,
+        "step_duration_ms": 5100,
+        "files_touched": ["/src/auth/jwt.py"],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 6,
+      "timestamp": "2026-02-15T10:00:42",
+      "request": {
+        "message_count": 11,
+        "total_input_tokens": 20200,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 390,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Bash", "input_summary": "command='cd /src && python manage.py test auth.tests.JWTTest -v2'" }
+        ],
+        "text_summary": "Applied the fix. Running tests to verify."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 37.2,
+        "cumulative_tokens": 78830,
+        "context_window_max": 200000,
+        "step_duration_ms": 10200,
+        "files_touched": [],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 7,
+      "timestamp": "2026-02-15T10:00:54",
+      "request": {
+        "message_count": 13,
+        "total_input_tokens": 23600,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 580,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Edit", "input_summary": "file_path='/src/auth/jwt.py', old_string='exp = datetime.utcnow()'" }
+        ],
+        "text_summary": "Tests still failing: 'AssertionError: token expired after 30s not 30m'. The fix didn't take. Trying a different approach with datetime.now(timezone.utc). Attempt 1."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 50.8,
+        "cumulative_tokens": 107430,
+        "context_window_max": 200000,
+        "step_duration_ms": 6300,
+        "files_touched": ["/src/auth/jwt.py"],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 8,
+      "timestamp": "2026-02-15T10:01:06",
+      "request": {
+        "message_count": 15,
+        "total_input_tokens": 29800,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 420,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Bash", "input_summary": "command='cd /src && python manage.py test auth.tests.JWTTest -v2'" }
+        ],
+        "text_summary": "Running tests after timezone fix."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 51.2,
+        "cumulative_tokens": 109830,
+        "context_window_max": 200000,
+        "step_duration_ms": 11400,
+        "files_touched": [],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 9,
+      "timestamp": "2026-02-15T10:01:21",
+      "request": {
+        "message_count": 17,
+        "total_input_tokens": 36200,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 560,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Edit", "input_summary": "file_path='/src/auth/jwt.py', old_string='exp = datetime.now'" }
+        ],
+        "text_summary": "Still failing: 'jwt.exceptions.ExpiredSignatureError' appears too early. Trying to change the algorithm from HS256 to RS256. Attempt 2."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 64.7,
+        "cumulative_tokens": 136430,
+        "context_window_max": 200000,
+        "step_duration_ms": 7100,
+        "files_touched": ["/src/auth/jwt.py"],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 10,
+      "timestamp": "2026-02-15T10:01:32",
+      "request": {
+        "message_count": 19,
+        "total_input_tokens": 42000,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 390,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Bash", "input_summary": "command='cd /src && python manage.py test auth.tests.JWTTest -v2'" }
+        ],
+        "text_summary": "Testing again after algorithm change."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 82.1,
+        "cumulative_tokens": 172830,
+        "context_window_max": 200000,
+        "step_duration_ms": 12300,
+        "files_touched": [],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 11,
+      "timestamp": "2026-02-15T10:01:46",
+      "request": {
+        "message_count": 21,
+        "total_input_tokens": 9200,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 560,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Edit", "input_summary": "file_path='/src/auth/jwt.py', old_string='algorithm=RS256'" }
+        ],
+        "text_summary": "Error: 'cryptography package not installed for RS256'. Reverting to HS256 and checking SECRET_KEY config. Attempt 3."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 94.3,
+        "cumulative_tokens": 196430,
+        "context_window_max": 200000,
+        "step_duration_ms": 6800,
+        "files_touched": ["/src/auth/jwt.py"],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 12,
+      "timestamp": "2026-02-15T10:01:58",
+      "request": {
+        "message_count": 23,
+        "total_input_tokens": 12400,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 390,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Bash", "input_summary": "command='cd /src && python manage.py test auth.tests.JWTTest -v2'" }
+        ],
+        "text_summary": "Running tests after reverting RS256 and adjusting SECRET_KEY."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 108.6,
+        "cumulative_tokens": 228230,
+        "context_window_max": 200000,
+        "step_duration_ms": 11900,
+        "files_touched": [],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 13,
+      "timestamp": "2026-02-15T10:02:12",
+      "request": {
+        "message_count": 25,
+        "total_input_tokens": 15600,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 560,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Edit", "input_summary": "file_path='/src/auth/jwt.py', old_string='timedelta(minutes=expire'" }
+        ],
+        "text_summary": "Tests still failing. 'token expiry off by factor of 60'. Going back to basics — maybe the issue is in decode not encode. Attempt 4."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 124.9,
+        "cumulative_tokens": 262030,
+        "context_window_max": 200000,
+        "step_duration_ms": 7400,
+        "files_touched": ["/src/auth/jwt.py"],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 14,
+      "timestamp": "2026-02-15T10:02:24",
+      "request": {
+        "message_count": 27,
+        "total_input_tokens": 19800,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 390,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Bash", "input_summary": "command='cd /src && python manage.py test auth.tests.JWTTest -v2'" }
+        ],
+        "text_summary": "Testing decode path change."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 139.4,
+        "cumulative_tokens": 294430,
+        "context_window_max": 200000,
+        "step_duration_ms": 12800,
+        "files_touched": [],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 15,
+      "timestamp": "2026-02-15T10:02:38",
+      "request": {
+        "message_count": 29,
+        "total_input_tokens": 24000,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 560,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Read", "input_summary": "file_path='/src/auth/middleware.py'" },
+          { "name": "Edit", "input_summary": "file_path='/src/auth/jwt.py', old_string='leeway=timedelta'" }
+        ],
+        "text_summary": "Still failing. Checking middleware leeway config. Adding leeway=0 to force strict expiry. Attempt 5."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 157.2,
+        "cumulative_tokens": 331230,
+        "context_window_max": 200000,
+        "step_duration_ms": 8200,
+        "files_touched": ["/src/auth/middleware.py", "/src/auth/jwt.py"],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 16,
+      "timestamp": "2026-02-15T10:02:52",
+      "request": {
+        "message_count": 31,
+        "total_input_tokens": 28200,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 390,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Bash", "input_summary": "command='cd /src && python manage.py test auth -v2'" }
+        ],
+        "text_summary": "Running full auth test suite after leeway change."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 174.6,
+        "cumulative_tokens": 368430,
+        "context_window_max": 200000,
+        "step_duration_ms": 14000,
+        "files_touched": [],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 17,
+      "timestamp": "2026-02-15T10:03:07",
+      "request": {
+        "message_count": 33,
+        "total_input_tokens": 32400,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 560,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Edit", "input_summary": "file_path='/src/auth/jwt.py', old_string='leeway=0'" }
+        ],
+        "text_summary": "FAILED: 9 tests failing now (was 3). Revert leeway change. Now also seeing 'InvalidSignatureError'. Changing SECRET_KEY encoding. Attempt 6."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 193.1,
+        "cumulative_tokens": 406430,
+        "context_window_max": 200000,
+        "step_duration_ms": 7600,
+        "files_touched": ["/src/auth/jwt.py"],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 18,
+      "timestamp": "2026-02-15T10:03:22",
+      "request": {
+        "message_count": 35,
+        "total_input_tokens": 36600,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 390,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Bash", "input_summary": "command='cd /src && python manage.py test auth -v2'" }
+        ],
+        "text_summary": "Testing after SECRET_KEY encoding change."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 211.9,
+        "cumulative_tokens": 447030,
+        "context_window_max": 200000,
+        "step_duration_ms": 15200,
+        "files_touched": [],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 19,
+      "timestamp": "2026-02-15T10:03:37",
+      "request": {
+        "message_count": 37,
+        "total_input_tokens": 40800,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 560,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Edit", "input_summary": "file_path='/src/auth/jwt.py', old_string='SECRET_KEY.encode'" }
+        ],
+        "text_summary": "12 tests failing. 'ValueError: not enough values to unpack' in JWT decode. Something is deeply broken. Trying to rewrite the entire create_token function. Attempt 7."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 231.8,
+        "cumulative_tokens": 491430,
+        "context_window_max": 200000,
+        "step_duration_ms": 8900,
+        "files_touched": ["/src/auth/jwt.py"],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 20,
+      "timestamp": "2026-02-15T10:03:53",
+      "request": {
+        "message_count": 39,
+        "total_input_tokens": 45000,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 390,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Bash", "input_summary": "command='cd /src && python manage.py test auth -v2'" }
+        ],
+        "text_summary": "Running tests after full rewrite of create_token."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 251.7,
+        "cumulative_tokens": 539430,
+        "context_window_max": 200000,
+        "step_duration_ms": 16400,
+        "files_touched": [],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 21,
+      "timestamp": "2026-02-15T10:04:11",
+      "request": {
+        "message_count": 41,
+        "total_input_tokens": 49200,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 560,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Edit", "input_summary": "file_path='/src/auth/jwt.py', old_string='def create_access_token'" }
+        ],
+        "text_summary": "Fatal: ALL 17 tests now failing — import error caused by rewrite. Token module is completely broken. Attempt 8: trying to restore from git."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 272.3,
+        "cumulative_tokens": 591430,
+        "context_window_max": 200000,
+        "step_duration_ms": 9800,
+        "files_touched": ["/src/auth/jwt.py"],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 22,
+      "timestamp": "2026-02-15T10:04:28",
+      "request": {
+        "message_count": 43,
+        "total_input_tokens": 53400,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 390,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Bash", "input_summary": "command='cd /src && python manage.py test auth -v2'" }
+        ],
+        "text_summary": "Tried to git restore. Now getting merge conflict markers in jwt.py. Running tests."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 294.1,
+        "cumulative_tokens": 647430,
+        "context_window_max": 200000,
+        "step_duration_ms": 17000,
+        "files_touched": [],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 23,
+      "timestamp": "2026-02-15T10:04:49",
+      "request": {
+        "message_count": 45,
+        "total_input_tokens": 57600,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 300,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Read", "input_summary": "file_path='/src/auth/jwt.py'" },
+          { "name": "Read", "input_summary": "file_path='/src/settings.py'" }
+        ],
+        "text_summary": "SyntaxError: invalid syntax in jwt.py. Trying to re-read the entire codebase to understand what state we're in. Context window filling up — lost track of all the changes made."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 314.9,
+        "cumulative_tokens": 699430,
+        "context_window_max": 200000,
+        "step_duration_ms": 8000,
+        "files_touched": ["/src/auth/jwt.py", "/src/settings.py"],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 2
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 24,
+      "timestamp": "2026-02-15T10:05:09",
+      "request": {
+        "message_count": 47,
+        "total_input_tokens": 57600,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 300,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Read", "input_summary": "file_path='/src/auth/jwt.py'" },
+          { "name": "Read", "input_summary": "file_path='/src/settings.py'" }
+        ],
+        "text_summary": "Re-reading codebase again. Context window overflowing. No memory of what was changed."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 334.9,
+        "cumulative_tokens": 741430,
+        "context_window_max": 200000,
+        "step_duration_ms": 8000,
+        "files_touched": ["/src/auth/jwt.py", "/src/settings.py"],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 3
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 25,
+      "timestamp": "2026-02-15T10:05:29",
+      "request": {
+        "message_count": 49,
+        "total_input_tokens": 57600,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 300,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Read", "input_summary": "file_path='/src/auth/jwt.py'" },
+          { "name": "Read", "input_summary": "file_path='/src/settings.py'" }
+        ],
+        "text_summary": "Re-reading codebase again. Context window overflowing. No memory of what was changed."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 354.9,
+        "cumulative_tokens": 783430,
+        "context_window_max": 200000,
+        "step_duration_ms": 8000,
+        "files_touched": ["/src/auth/jwt.py", "/src/settings.py"],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 4
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 26,
+      "timestamp": "2026-02-15T10:05:49",
+      "request": {
+        "message_count": 51,
+        "total_input_tokens": 57600,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 300,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Read", "input_summary": "file_path='/src/auth/jwt.py'" },
+          { "name": "Read", "input_summary": "file_path='/src/settings.py'" }
+        ],
+        "text_summary": "Re-reading codebase again. Context window overflowing. No memory of what was changed."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 374.9,
+        "cumulative_tokens": 825430,
+        "context_window_max": 200000,
+        "step_duration_ms": 8000,
+        "files_touched": ["/src/auth/jwt.py", "/src/settings.py"],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 5
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 27,
+      "timestamp": "2026-02-15T10:06:09",
+      "request": {
+        "message_count": 53,
+        "total_input_tokens": 57600,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 300,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Read", "input_summary": "file_path='/src/auth/jwt.py'" },
+          { "name": "Read", "input_summary": "file_path='/src/settings.py'" }
+        ],
+        "text_summary": "Re-reading codebase again. Context window overflowing. No memory of what was changed."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 394.9,
+        "cumulative_tokens": 867430,
+        "context_window_max": 200000,
+        "step_duration_ms": 8000,
+        "files_touched": ["/src/auth/jwt.py", "/src/settings.py"],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 6
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "fake-unprotected-jwt-fix",
+      "step_id": 28,
+      "timestamp": "2026-02-15T10:06:29",
+      "request": {
+        "message_count": 55,
+        "total_input_tokens": 57600,
+        "tools_provided": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+        "system_prompt_tokens": 650
+      },
+      "response": {
+        "output_tokens": 300,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          { "name": "Read", "input_summary": "file_path='/src/auth/jwt.py'" },
+          { "name": "Read", "input_summary": "file_path='/src/settings.py'" }
+        ],
+        "text_summary": "Re-reading codebase again. Completely lost. Task failed — could not fix the JWT expiry bug after 28 steps and 867k tokens."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 414.9,
+        "cumulative_tokens": 909430,
+        "context_window_max": 200000,
+        "step_duration_ms": 8000,
+        "files_touched": ["/src/auth/jwt.py", "/src/settings.py"],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 7
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    }
+  ],
+  "summary": {
+    "total_tokens": 909430,
+    "final_context_pct": 414.9,
+    "total_tool_calls": 38,
+    "total_duration_s": 389.0
+  },
+  "session_id": "fake-unprotected-jwt-fix",
+  "optimizations_applied": {
+    "loop_detection": 0,
+    "error_spiral": 0,
+    "context_compacting": 0,
+    "tool_validation": 0
+  }
+}
