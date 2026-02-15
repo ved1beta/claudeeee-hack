@@ -1,0 +1,4 @@
+backend/.venv
+backend/.env
+backend/sessions/
+dashboard/node_modules

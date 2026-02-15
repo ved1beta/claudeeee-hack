@@ -1,0 +1,674 @@
+{
+  "total_steps": 15,
+  "health_score": 94,
+  "health_breakdown": {
+    "structural": {
+      "score": 100,
+      "weight": 0.4
+    },
+    "memory": {
+      "score": 100,
+      "weight": 0.3
+    },
+    "stability": {
+      "score": 100,
+      "weight": 0.2
+    },
+    "diversity": {
+      "score": 44,
+      "weight": 0.1
+    }
+  },
+  "degradation_point": null,
+  "anomalies": {
+    "loops": [],
+    "context_decay": [],
+    "repetition": [],
+    "error_spirals": []
+  },
+  "steps": [
+    {
+      "schema_version": "1.0",
+      "session_id": "compare-unprotected-comp-e6a61e21",
+      "step_id": 1,
+      "timestamp": "2026-02-15T09:08:52.279345",
+      "request": {
+        "message_count": 1,
+        "total_input_tokens": 1137,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 199
+      },
+      "response": {
+        "output_tokens": 85,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "list_files",
+            "input_summary": "{'path': '.'}"
+          }
+        ],
+        "text_summary": "I'll build a comprehensive REST API with FastAPI that meets all your requirements. Let me start by exploring the current directory structure and then create the complete application."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 0.6,
+        "cumulative_tokens": 1222,
+        "context_window_max": 200000,
+        "step_duration_ms": 3933,
+        "files_touched": [
+          "."
+        ],
+        "unique_tools_this_session": 1,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "compare-unprotected-comp-e6a61e21",
+      "step_id": 2,
+      "timestamp": "2026-02-15T09:08:54.254705",
+      "request": {
+        "message_count": 3,
+        "total_input_tokens": 1237,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 199
+      },
+      "response": {
+        "output_tokens": 55,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{'path': 'README.md'}"
+          }
+        ],
+        "text_summary": ""
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 1.2,
+        "cumulative_tokens": 2514,
+        "context_window_max": 200000,
+        "step_duration_ms": 1975,
+        "files_touched": [
+          "README.md"
+        ],
+        "unique_tools_this_session": 2,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "compare-unprotected-comp-e6a61e21",
+      "step_id": 3,
+      "timestamp": "2026-02-15T09:08:57.798457",
+      "request": {
+        "message_count": 5,
+        "total_input_tokens": 1316,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 199
+      },
+      "response": {
+        "output_tokens": 198,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "write_file",
+            "input_summary": "{'path': 'requirements.txt', 'content': 'fastapi==0.104.1\\nuvicorn==0.24.0\\nsqlalchemy==2.0.23\\npydantic==2.5.0\\npython-jose[cryptography]==3.3.0\\npasslib[bcrypt]==1.7.4\\npython-multipart==0.0.6\\npyte"
+          }
+        ],
+        "text_summary": "Now I'll create a comprehensive REST API with all the required features. Let me start by setting up the project structure:"
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 1.8,
+        "cumulative_tokens": 4028,
+        "context_window_max": 200000,
+        "step_duration_ms": 3544,
+        "files_touched": [
+          "requirements.txt"
+        ],
+        "unique_tools_this_session": 3,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "compare-unprotected-comp-e6a61e21",
+      "step_id": 4,
+      "timestamp": "2026-02-15T09:09:03.841336",
+      "request": {
+        "message_count": 7,
+        "total_input_tokens": 1532,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 199
+      },
+      "response": {
+        "output_tokens": 72,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "write_file",
+            "input_summary": "{'path': 'app/__init__.py', 'content': ''}"
+          }
+        ],
+        "text_summary": ""
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 2.6,
+        "cumulative_tokens": 5632,
+        "context_window_max": 200000,
+        "step_duration_ms": 6043,
+        "files_touched": [
+          "app/__init__.py"
+        ],
+        "unique_tools_this_session": 3,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "compare-unprotected-comp-e6a61e21",
+      "step_id": 5,
+      "timestamp": "2026-02-15T09:09:18.077203",
+      "request": {
+        "message_count": 9,
+        "total_input_tokens": 1624,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 199
+      },
+      "response": {
+        "output_tokens": 290,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "write_file",
+            "input_summary": "{'path': 'app/config.py', 'content': '\"\"\"Application configuration.\"\"\"\\nimport os\\nfrom typing import Optional\\n\\nclass Settings:\\n    \"\"\"Application settings.\"\"\"\\n    \\n    # Database\\n    DATABASE_U"
+          }
+        ],
+        "text_summary": ""
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 3.4,
+        "cumulative_tokens": 7546,
+        "context_window_max": 200000,
+        "step_duration_ms": 14236,
+        "files_touched": [
+          "app/config.py"
+        ],
+        "unique_tools_this_session": 3,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "compare-unprotected-comp-e6a61e21",
+      "step_id": 6,
+      "timestamp": "2026-02-15T09:09:29.522609",
+      "request": {
+        "message_count": 11,
+        "total_input_tokens": 1934,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 199
+      },
+      "response": {
+        "output_tokens": 235,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "write_file",
+            "input_summary": "{'path': 'app/database.py', 'content': '\"\"\"Database configuration and session management.\"\"\"\\nfrom sqlalchemy import create_engine\\nfrom sqlalchemy.ext.declarative import declarative_base\\nfrom sqlalc"
+          }
+        ],
+        "text_summary": ""
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 4.4,
+        "cumulative_tokens": 9715,
+        "context_window_max": 200000,
+        "step_duration_ms": 11445,
+        "files_touched": [
+          "app/database.py"
+        ],
+        "unique_tools_this_session": 3,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "compare-unprotected-comp-e6a61e21",
+      "step_id": 7,
+      "timestamp": "2026-02-15T09:09:43.662044",
+      "request": {
+        "message_count": 13,
+        "total_input_tokens": 2189,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 199
+      },
+      "response": {
+        "output_tokens": 554,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "write_file",
+            "input_summary": "{'path': 'app/models.py', 'content': '\"\"\"Database models.\"\"\"\\nfrom datetime import datetime\\nfrom sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Text, Enum as SQLEnum\\nfrom sqlalchem"
+          }
+        ],
+        "text_summary": ""
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 5.5,
+        "cumulative_tokens": 12458,
+        "context_window_max": 200000,
+        "step_duration_ms": 14139,
+        "files_touched": [
+          "app/models.py"
+        ],
+        "unique_tools_this_session": 3,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "compare-unprotected-comp-e6a61e21",
+      "step_id": 8,
+      "timestamp": "2026-02-15T09:09:57.389140",
+      "request": {
+        "message_count": 15,
+        "total_input_tokens": 2763,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 199
+      },
+      "response": {
+        "output_tokens": 679,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "write_file",
+            "input_summary": "{'path': 'app/schemas.py', 'content': '\"\"\"Pydantic schemas for validation.\"\"\"\\nfrom datetime import datetime\\nfrom typing import Optional\\nfrom pydantic import BaseModel, EmailStr, Field, ConfigDict\\n"
+          }
+        ],
+        "text_summary": ""
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 6.9,
+        "cumulative_tokens": 15900,
+        "context_window_max": 200000,
+        "step_duration_ms": 13727,
+        "files_touched": [
+          "app/schemas.py"
+        ],
+        "unique_tools_this_session": 3,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "compare-unprotected-comp-e6a61e21",
+      "step_id": 9,
+      "timestamp": "2026-02-15T09:10:10.075371",
+      "request": {
+        "message_count": 17,
+        "total_input_tokens": 3462,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 199
+      },
+      "response": {
+        "output_tokens": 866,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "write_file",
+            "input_summary": "{'path': 'app/security.py', 'content': '\"\"\"Security utilities for authentication and authorization.\"\"\"\\nfrom datetime import datetime, timedelta\\nfrom typing import Optional\\n\\nfrom jose import JWTErr"
+          }
+        ],
+        "text_summary": ""
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 8.6,
+        "cumulative_tokens": 20228,
+        "context_window_max": 200000,
+        "step_duration_ms": 12686,
+        "files_touched": [
+          "app/security.py"
+        ],
+        "unique_tools_this_session": 3,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "compare-unprotected-comp-e6a61e21",
+      "step_id": 10,
+      "timestamp": "2026-02-15T09:10:17.233953",
+      "request": {
+        "message_count": 19,
+        "total_input_tokens": 4348,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 199
+      },
+      "response": {
+        "output_tokens": 269,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "write_file",
+            "input_summary": "{'path': 'app/logger.py', 'content': '\"\"\"Logging configuration.\"\"\"\\nimport logging\\nimport sys\\nfrom app.config import settings\\n\\ndef setup_logger(name: str) -> logging.Logger:\\n    \"\"\"Setup and conf"
+          }
+        ],
+        "text_summary": ""
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 10.8,
+        "cumulative_tokens": 24845,
+        "context_window_max": 200000,
+        "step_duration_ms": 7158,
+        "files_touched": [
+          "app/logger.py"
+        ],
+        "unique_tools_this_session": 3,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "compare-unprotected-comp-e6a61e21",
+      "step_id": 11,
+      "timestamp": "2026-02-15T09:10:52.046306",
+      "request": {
+        "message_count": 21,
+        "total_input_tokens": 4637,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 199
+      },
+      "response": {
+        "output_tokens": 402,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "write_file",
+            "input_summary": "{'path': 'app/exceptions.py', 'content': '\"\"\"Custom exceptions.\"\"\"\\nfrom fastapi import HTTPException, status\\n\\n\\nclass NotFoundException(HTTPException):\\n    \"\"\"Exception for resource not found.\"\"\"\\"
+          }
+        ],
+        "text_summary": ""
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 13.1,
+        "cumulative_tokens": 29884,
+        "context_window_max": 200000,
+        "step_duration_ms": 34812,
+        "files_touched": [
+          "app/exceptions.py"
+        ],
+        "unique_tools_this_session": 3,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "compare-unprotected-comp-e6a61e21",
+      "step_id": 12,
+      "timestamp": "2026-02-15T09:11:18.975870",
+      "request": {
+        "message_count": 23,
+        "total_input_tokens": 5059,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 199
+      },
+      "response": {
+        "output_tokens": 75,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "write_file",
+            "input_summary": "{'path': 'app/routers/__init__.py', 'content': ''}"
+          }
+        ],
+        "text_summary": ""
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 15.6,
+        "cumulative_tokens": 35018,
+        "context_window_max": 200000,
+        "step_duration_ms": 26929,
+        "files_touched": [
+          "app/routers/__init__.py"
+        ],
+        "unique_tools_this_session": 3,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "compare-unprotected-comp-e6a61e21",
+      "step_id": 13,
+      "timestamp": "2026-02-15T09:11:57.680972",
+      "request": {
+        "message_count": 25,
+        "total_input_tokens": 5157,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 199
+      },
+      "response": {
+        "output_tokens": 808,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "write_file",
+            "input_summary": "{'path': 'app/routers/auth.py', 'content': '\"\"\"Authentication routes.\"\"\"\\nfrom datetime import timedelta\\nfrom fastapi import APIRouter, Depends, status\\nfrom sqlalchemy.orm import Session\\n\\nfrom app"
+          }
+        ],
+        "text_summary": ""
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 18.2,
+        "cumulative_tokens": 40983,
+        "context_window_max": 200000,
+        "step_duration_ms": 38705,
+        "files_touched": [
+          "app/routers/auth.py"
+        ],
+        "unique_tools_this_session": 3,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "compare-unprotected-comp-e6a61e21",
+      "step_id": 14,
+      "timestamp": "2026-02-15T09:12:37.617722",
+      "request": {
+        "message_count": 27,
+        "total_input_tokens": 5988,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 199
+      },
+      "response": {
+        "output_tokens": 1773,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "write_file",
+            "input_summary": "{'path': 'app/routers/projects.py', 'content': '\"\"\"Projects routes.\"\"\"\\nfrom typing import Optional\\nfrom math import ceil\\n\\nfrom fastapi import APIRouter, Depends, Query, status\\nfrom sqlalchemy.orm"
+          }
+        ],
+        "text_summary": ""
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 21.2,
+        "cumulative_tokens": 48744,
+        "context_window_max": 200000,
+        "step_duration_ms": 39937,
+        "files_touched": [
+          "app/routers/projects.py"
+        ],
+        "unique_tools_this_session": 3,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "compare-unprotected-comp-e6a61e21",
+      "step_id": 15,
+      "timestamp": "2026-02-15T09:12:47.395293",
+      "request": {
+        "message_count": 29,
+        "total_input_tokens": 7784,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 199
+      },
+      "response": {
+        "output_tokens": 745,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "write_file",
+            "input_summary": "{'path': 'app/main.py', 'content': '\"\"\"Main FastAPI application.\"\"\"\\nfrom fastapi import FastAPI, Request, status\\nfrom fastapi.exceptions import RequestValidationError\\nfrom fastapi.responses import "
+          }
+        ],
+        "text_summary": ""
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 25.1,
+        "cumulative_tokens": 57273,
+        "context_window_max": 200000,
+        "step_duration_ms": 9777,
+        "files_touched": [
+          "app/main.py"
+        ],
+        "unique_tools_this_session": 3,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    }
+  ],
+  "summary": {
+    "total_tokens": 57273,
+    "final_context_pct": 25.1,
+    "total_tool_calls": 15,
+    "total_duration_s": 239.046
+  },
+  "session_id": "compare-unprotected-comp-e6a61e21",
+  "optimizations_applied": {
+    "loop_detection": 0,
+    "error_spiral": 0,
+    "context_compacting": 0,
+    "tool_validation": 0
+  }
+}

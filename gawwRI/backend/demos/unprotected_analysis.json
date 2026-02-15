@@ -1,0 +1,1937 @@
+{
+  "total_steps": 32,
+  "health_score": 8,
+  "health_breakdown": {
+    "structural": {
+      "score": 0,
+      "weight": 0.4
+    },
+    "memory": {
+      "score": 0,
+      "weight": 0.3
+    },
+    "stability": {
+      "score": 0,
+      "weight": 0.2
+    },
+    "diversity": {
+      "score": 78,
+      "weight": 0.1
+    }
+  },
+  "degradation_point": {
+    "step_id": 12,
+    "health_at_point": 66,
+    "message": "Health dropped to 66 at step 12"
+  },
+  "anomalies": {
+    "loops": [
+      {
+        "type": "LOOP",
+        "start_step": 10,
+        "end_step": 17,
+        "pattern": "Edit:/app/routes.py|Bash:cd /app && python -m pytest tests/test_routes.py -v|Edit:/app/routes.py|Bash:cd /app && python -m pytest tests/test_routes.py -v",
+        "severity": "HIGH"
+      },
+      {
+        "type": "LOOP",
+        "start_step": 22,
+        "end_step": 27,
+        "pattern": "Bash:cd /app && python -m pytest tests/ -v|Edit:/app/routes.py|Bash:cd /app && python -m pytest tests/ -v|Edit:/app/routes.py|Bash:cd /app && python -m pytest tests/ -v|Edit:/app/routes.py",
+        "severity": "HIGH"
+      },
+      {
+        "type": "LOOP",
+        "start_step": 6,
+        "end_step": 9,
+        "pattern": "Edit:/app/routes.py|Bash:cd /app && python -m pytest tests/ -v",
+        "severity": "HIGH"
+      },
+      {
+        "type": "LOOP",
+        "start_step": 18,
+        "end_step": 21,
+        "pattern": "Edit:/app/routes.py|Bash:cd /app && python -m pytest tests/test_routes.py -v",
+        "severity": "HIGH"
+      },
+      {
+        "type": "LOOP",
+        "start_step": 29,
+        "end_step": 32,
+        "pattern": "Read:/app/routes.py|Read:/app/app.py|Read:/app/routes.py|Read:/app/app.py",
+        "severity": "HIGH"
+      }
+    ],
+    "context_decay": [
+      {
+        "type": "CONTEXT_DECAY",
+        "step_id": 7,
+        "utilization": 52.3,
+        "rate": 12.9,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "CONTEXT_DECAY",
+        "step_id": 8,
+        "utilization": 68.3,
+        "rate": 16.0,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 9,
+        "utilization": 86.4,
+        "rate": 18.1,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 10,
+        "utilization": 90.3,
+        "rate": 3.9,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 11,
+        "utilization": 93.3,
+        "rate": 3.0,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 12,
+        "utilization": 98.9,
+        "rate": 5.6,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 13,
+        "utilization": 102.8,
+        "rate": 3.9,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 14,
+        "utilization": 109.9,
+        "rate": 7.1,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 15,
+        "utilization": 114.9,
+        "rate": 5.0,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 16,
+        "utilization": 123.4,
+        "rate": 8.5,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 17,
+        "utilization": 129.4,
+        "rate": 6.0,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 18,
+        "utilization": 139.3,
+        "rate": 9.9,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 19,
+        "utilization": 146.3,
+        "rate": 7.0,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 20,
+        "utilization": 157.8,
+        "rate": 11.5,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 21,
+        "utilization": 165.9,
+        "rate": 8.1,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 22,
+        "utilization": 171.8,
+        "rate": 5.9,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 23,
+        "utilization": 179.8,
+        "rate": 8.0,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 24,
+        "utilization": 189.8,
+        "rate": 10.0,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 25,
+        "utilization": 201.8,
+        "rate": 12.0,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 26,
+        "utilization": 215.9,
+        "rate": 14.1,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 27,
+        "utilization": 231.8,
+        "rate": 15.9,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 28,
+        "utilization": 249.8,
+        "rate": 18.0,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 29,
+        "utilization": 259.9,
+        "rate": 10.1,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 30,
+        "utilization": 269.9,
+        "rate": 10.0,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 31,
+        "utilization": 279.9,
+        "rate": 10.0,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 32,
+        "utilization": 289.8,
+        "rate": 9.9,
+        "severity": "CRITICAL"
+      }
+    ],
+    "repetition": [
+      {
+        "type": "REPETITION",
+        "step_id": 14,
+        "tool": "Edit",
+        "count": 3,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 15,
+        "tool": "Bash",
+        "count": 3,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 16,
+        "tool": "Edit",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 17,
+        "tool": "Bash",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 18,
+        "tool": "Edit",
+        "count": 5,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 19,
+        "tool": "Bash",
+        "count": 5,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 20,
+        "tool": "Edit",
+        "count": 6,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 21,
+        "tool": "Bash",
+        "count": 6,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 24,
+        "tool": "Bash",
+        "count": 3,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 24,
+        "tool": "Edit",
+        "count": 3,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 25,
+        "tool": "Bash",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 25,
+        "tool": "Edit",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 26,
+        "tool": "Bash",
+        "count": 5,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 26,
+        "tool": "Edit",
+        "count": 5,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 27,
+        "tool": "Bash",
+        "count": 6,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 27,
+        "tool": "Edit",
+        "count": 6,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 28,
+        "tool": "Bash",
+        "count": 6,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 28,
+        "tool": "Edit",
+        "count": 6,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 31,
+        "tool": "Read",
+        "count": 3,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 32,
+        "tool": "Read",
+        "count": 4,
+        "severity": "MEDIUM"
+      }
+    ],
+    "error_spirals": [
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 10,
+        "current_step": 12,
+        "consecutive_errors": 3,
+        "severity": "HIGH"
+      },
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 10,
+        "current_step": 13,
+        "consecutive_errors": 4,
+        "severity": "HIGH"
+      },
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 10,
+        "current_step": 14,
+        "consecutive_errors": 5,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 10,
+        "current_step": 15,
+        "consecutive_errors": 6,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 10,
+        "current_step": 16,
+        "consecutive_errors": 7,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 10,
+        "current_step": 17,
+        "consecutive_errors": 8,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 10,
+        "current_step": 18,
+        "consecutive_errors": 9,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 10,
+        "current_step": 19,
+        "consecutive_errors": 10,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 10,
+        "current_step": 20,
+        "consecutive_errors": 11,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 10,
+        "current_step": 21,
+        "consecutive_errors": 12,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 10,
+        "current_step": 22,
+        "consecutive_errors": 13,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 10,
+        "current_step": 23,
+        "consecutive_errors": 14,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 10,
+        "current_step": 24,
+        "consecutive_errors": 15,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 10,
+        "current_step": 25,
+        "consecutive_errors": 16,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 10,
+        "current_step": 26,
+        "consecutive_errors": 17,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 10,
+        "current_step": 27,
+        "consecutive_errors": 18,
+        "severity": "CRITICAL"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 1,
+      "timestamp": "2026-02-15T10:00:00",
+      "request": {
+        "message_count": 3,
+        "total_input_tokens": 3200,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 450,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Glob",
+            "input_summary": "pattern='**/*.py'"
+          },
+          {
+            "name": "Read",
+            "input_summary": "file_path': '/app/app.py'"
+          }
+        ],
+        "text_summary": "Let me explore the Flask app structure first."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 1.6,
+        "cumulative_tokens": 3650,
+        "context_window_max": 200000,
+        "step_duration_ms": 2800,
+        "files_touched": [
+          "/app/app.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 2,
+      "timestamp": "2026-02-15T10:00:05",
+      "request": {
+        "message_count": 5,
+        "total_input_tokens": 8500,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 600,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Read",
+            "input_summary": "file_path': '/app/models.py'"
+          },
+          {
+            "name": "Read",
+            "input_summary": "file_path': '/app/routes.py'"
+          }
+        ],
+        "text_summary": "Reading the models and routes to understand the app structure."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 5.9,
+        "cumulative_tokens": 12750,
+        "context_window_max": 200000,
+        "step_duration_ms": 3200,
+        "files_touched": [
+          "/app/models.py",
+          "/app/routes.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 3,
+      "timestamp": "2026-02-15T10:00:11",
+      "request": {
+        "message_count": 7,
+        "total_input_tokens": 12000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 800,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Read",
+            "input_summary": "file_path': '/app/database.py'"
+          },
+          {
+            "name": "Read",
+            "input_summary": "file_path': '/app/config.py'"
+          }
+        ],
+        "text_summary": "Understanding the database layer and configuration."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 11.8,
+        "cumulative_tokens": 25550,
+        "context_window_max": 200000,
+        "step_duration_ms": 4100,
+        "files_touched": [
+          "/app/database.py",
+          "/app/config.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 4,
+      "timestamp": "2026-02-15T10:00:19",
+      "request": {
+        "message_count": 9,
+        "total_input_tokens": 15000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 1200,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Write",
+            "input_summary": "file_path': '/app/app_async.py'"
+          }
+        ],
+        "text_summary": "Creating the async version of the main app using Quart."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 19.4,
+        "cumulative_tokens": 41750,
+        "context_window_max": 200000,
+        "step_duration_ms": 8500,
+        "files_touched": [
+          "/app/app_async.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 5,
+      "timestamp": "2026-02-15T10:00:31",
+      "request": {
+        "message_count": 11,
+        "total_input_tokens": 18000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 900,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Edit",
+            "input_summary": "file_path': '/app/routes.py', 'old_string': 'def get_users'"
+          }
+        ],
+        "text_summary": "Converting routes to async - starting with get_users endpoint."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 28.3,
+        "cumulative_tokens": 60650,
+        "context_window_max": 200000,
+        "step_duration_ms": 5200,
+        "files_touched": [
+          "/app/routes.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 6,
+      "timestamp": "2026-02-15T10:00:39",
+      "request": {
+        "message_count": 13,
+        "total_input_tokens": 22000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 1100,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Edit",
+            "input_summary": "file_path': '/app/routes.py', 'old_string': 'def create_user'"
+          }
+        ],
+        "text_summary": "Converting create_user endpoint to async."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 39.4,
+        "cumulative_tokens": 83750,
+        "context_window_max": 200000,
+        "step_duration_ms": 6100,
+        "files_touched": [
+          "/app/routes.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 7,
+      "timestamp": "2026-02-15T10:00:49",
+      "request": {
+        "message_count": 15,
+        "total_input_tokens": 26000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 500,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Bash",
+            "input_summary": "command': 'cd /app && python -m pytest tests/ -v'"
+          }
+        ],
+        "text_summary": "Running tests to check the async conversion."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 52.3,
+        "cumulative_tokens": 110250,
+        "context_window_max": 200000,
+        "step_duration_ms": 12000,
+        "files_touched": [],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 8,
+      "timestamp": "2026-02-15T10:01:04",
+      "request": {
+        "message_count": 17,
+        "total_input_tokens": 32000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 800,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Edit",
+            "input_summary": "file_path': '/app/routes.py', 'old_string': 'from flask import'"
+          }
+        ],
+        "text_summary": "Tests failed with import error. Fixing the imports to use quart instead of flask."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 68.3,
+        "cumulative_tokens": 143050,
+        "context_window_max": 200000,
+        "step_duration_ms": 4500,
+        "files_touched": [
+          "/app/routes.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 9,
+      "timestamp": "2026-02-15T10:01:12",
+      "request": {
+        "message_count": 19,
+        "total_input_tokens": 36000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 500,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Bash",
+            "input_summary": "command': 'cd /app && python -m pytest tests/ -v'"
+          }
+        ],
+        "text_summary": "Running tests again after import fix."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 86.4,
+        "cumulative_tokens": 179550,
+        "context_window_max": 200000,
+        "step_duration_ms": 11000,
+        "files_touched": [],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 10,
+      "timestamp": "2026-02-15T10:01:22",
+      "request": {
+        "message_count": 21,
+        "total_input_tokens": 8000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 600,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Edit",
+            "input_summary": "file_path': '/app/routes.py', 'old_string': 'async def get_users'"
+          }
+        ],
+        "text_summary": "Tests still failing. Error: 'coroutine object has no attribute json'. Trying to fix the async handler again. Attempt 1."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 90.3,
+        "cumulative_tokens": 188150,
+        "context_window_max": 200000,
+        "step_duration_ms": 5000,
+        "files_touched": [
+          "/app/routes.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 11,
+      "timestamp": "2026-02-15T10:01:34",
+      "request": {
+        "message_count": 23,
+        "total_input_tokens": 6000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 400,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Bash",
+            "input_summary": "command': 'cd /app && python -m pytest tests/test_routes.py -v'"
+          }
+        ],
+        "text_summary": "Running tests again. Still getting 'coroutine' error. The await is not being applied correctly. Will retry with different approach."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 93.3,
+        "cumulative_tokens": 194550,
+        "context_window_max": 200000,
+        "step_duration_ms": 11000,
+        "files_touched": [],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 12,
+      "timestamp": "2026-02-15T10:01:44",
+      "request": {
+        "message_count": 25,
+        "total_input_tokens": 11000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 600,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Edit",
+            "input_summary": "file_path': '/app/routes.py', 'old_string': 'async def get_users'"
+          }
+        ],
+        "text_summary": "Tests still failing. Error: 'coroutine object has no attribute json'. Trying to fix the async handler again. Attempt 2."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 98.9,
+        "cumulative_tokens": 206150,
+        "context_window_max": 200000,
+        "step_duration_ms": 5800,
+        "files_touched": [
+          "/app/routes.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 13,
+      "timestamp": "2026-02-15T10:01:56",
+      "request": {
+        "message_count": 27,
+        "total_input_tokens": 8000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 400,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Bash",
+            "input_summary": "command': 'cd /app && python -m pytest tests/test_routes.py -v'"
+          }
+        ],
+        "text_summary": "Running tests again. Still getting 'coroutine' error. The await is not being applied correctly. Will retry with different approach."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 102.8,
+        "cumulative_tokens": 214550,
+        "context_window_max": 200000,
+        "step_duration_ms": 11500,
+        "files_touched": [],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 14,
+      "timestamp": "2026-02-15T10:02:06",
+      "request": {
+        "message_count": 29,
+        "total_input_tokens": 14000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 600,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Edit",
+            "input_summary": "file_path': '/app/routes.py', 'old_string': 'async def get_users'"
+          }
+        ],
+        "text_summary": "Tests still failing. Error: 'coroutine object has no attribute json'. Trying to fix the async handler again. Attempt 3."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 109.9,
+        "cumulative_tokens": 229150,
+        "context_window_max": 200000,
+        "step_duration_ms": 6600,
+        "files_touched": [
+          "/app/routes.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 15,
+      "timestamp": "2026-02-15T10:02:18",
+      "request": {
+        "message_count": 31,
+        "total_input_tokens": 10000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 400,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Bash",
+            "input_summary": "command': 'cd /app && python -m pytest tests/test_routes.py -v'"
+          }
+        ],
+        "text_summary": "Running tests again. Still getting 'coroutine' error. The await is not being applied correctly. Will retry with different approach."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 114.9,
+        "cumulative_tokens": 239550,
+        "context_window_max": 200000,
+        "step_duration_ms": 12000,
+        "files_touched": [],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 16,
+      "timestamp": "2026-02-15T10:02:28",
+      "request": {
+        "message_count": 33,
+        "total_input_tokens": 17000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 600,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Edit",
+            "input_summary": "file_path': '/app/routes.py', 'old_string': 'async def get_users'"
+          }
+        ],
+        "text_summary": "Tests still failing. Error: 'coroutine object has no attribute json'. Trying to fix the async handler again. Attempt 4."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 123.4,
+        "cumulative_tokens": 257150,
+        "context_window_max": 200000,
+        "step_duration_ms": 7400,
+        "files_touched": [
+          "/app/routes.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 17,
+      "timestamp": "2026-02-15T10:02:40",
+      "request": {
+        "message_count": 35,
+        "total_input_tokens": 12000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 400,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Bash",
+            "input_summary": "command': 'cd /app && python -m pytest tests/test_routes.py -v'"
+          }
+        ],
+        "text_summary": "Running tests again. Still getting 'coroutine' error. The await is not being applied correctly. Will retry with different approach."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 129.4,
+        "cumulative_tokens": 269550,
+        "context_window_max": 200000,
+        "step_duration_ms": 12500,
+        "files_touched": [],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 18,
+      "timestamp": "2026-02-15T10:02:50",
+      "request": {
+        "message_count": 37,
+        "total_input_tokens": 20000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 600,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Edit",
+            "input_summary": "file_path': '/app/routes.py', 'old_string': 'async def get_users'"
+          }
+        ],
+        "text_summary": "Tests still failing. Error: 'coroutine object has no attribute json'. Trying to fix the async handler again. Attempt 5."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 139.3,
+        "cumulative_tokens": 290150,
+        "context_window_max": 200000,
+        "step_duration_ms": 8200,
+        "files_touched": [
+          "/app/routes.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 19,
+      "timestamp": "2026-02-15T10:03:02",
+      "request": {
+        "message_count": 39,
+        "total_input_tokens": 14000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 400,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Bash",
+            "input_summary": "command': 'cd /app && python -m pytest tests/test_routes.py -v'"
+          }
+        ],
+        "text_summary": "Running tests again. Still getting 'coroutine' error. The await is not being applied correctly. Will retry with different approach."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 146.3,
+        "cumulative_tokens": 304550,
+        "context_window_max": 200000,
+        "step_duration_ms": 13000,
+        "files_touched": [],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 20,
+      "timestamp": "2026-02-15T10:03:12",
+      "request": {
+        "message_count": 41,
+        "total_input_tokens": 23000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 600,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Edit",
+            "input_summary": "file_path': '/app/routes.py', 'old_string': 'async def get_users'"
+          }
+        ],
+        "text_summary": "Tests still failing. Error: 'coroutine object has no attribute json'. Trying to fix the async handler again. Attempt 6."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 157.8,
+        "cumulative_tokens": 328150,
+        "context_window_max": 200000,
+        "step_duration_ms": 9000,
+        "files_touched": [
+          "/app/routes.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 21,
+      "timestamp": "2026-02-15T10:03:24",
+      "request": {
+        "message_count": 43,
+        "total_input_tokens": 16000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 400,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Bash",
+            "input_summary": "command': 'cd /app && python -m pytest tests/test_routes.py -v'"
+          }
+        ],
+        "text_summary": "Running tests again. Still getting 'coroutine' error. The await is not being applied correctly. Will retry with different approach."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 165.9,
+        "cumulative_tokens": 344550,
+        "context_window_max": 200000,
+        "step_duration_ms": 13500,
+        "files_touched": [],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 22,
+      "timestamp": "2026-02-15T10:03:39",
+      "request": {
+        "message_count": 45,
+        "total_input_tokens": 12000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 500,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Bash",
+            "input_summary": "command': 'cd /app && python -m pytest tests/ -v'"
+          },
+          {
+            "name": "Edit",
+            "input_summary": "file_path': '/app/routes.py', 'old_string': 'async def'"
+          }
+        ],
+        "text_summary": "Error: ModuleNotFoundError 'quart'. Trying to install it. pip install quart failed with permission error. Retrying with --user flag."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 171.8,
+        "cumulative_tokens": 357050,
+        "context_window_max": 200000,
+        "step_duration_ms": 15000,
+        "files_touched": [
+          "/app/routes.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 23,
+      "timestamp": "2026-02-15T10:03:54",
+      "request": {
+        "message_count": 47,
+        "total_input_tokens": 16000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 500,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Bash",
+            "input_summary": "command': 'cd /app && python -m pytest tests/ -v'"
+          },
+          {
+            "name": "Edit",
+            "input_summary": "file_path': '/app/routes.py', 'old_string': 'async def'"
+          }
+        ],
+        "text_summary": "Still getting ModuleNotFoundError. The virtual environment seems broken. Trying to recreate it. Error persists after retry."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 179.8,
+        "cumulative_tokens": 373550,
+        "context_window_max": 200000,
+        "step_duration_ms": 17000,
+        "files_touched": [
+          "/app/routes.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 24,
+      "timestamp": "2026-02-15T10:04:09",
+      "request": {
+        "message_count": 49,
+        "total_input_tokens": 20000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 500,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Bash",
+            "input_summary": "command': 'cd /app && python -m pytest tests/ -v'"
+          },
+          {
+            "name": "Edit",
+            "input_summary": "file_path': '/app/routes.py', 'old_string': 'async def'"
+          }
+        ],
+        "text_summary": "Cannot connect to database after async conversion. Error: 'connection pool exhausted'. Trying again with different pool config."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 189.8,
+        "cumulative_tokens": 394050,
+        "context_window_max": 200000,
+        "step_duration_ms": 19000,
+        "files_touched": [
+          "/app/routes.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 25,
+      "timestamp": "2026-02-15T10:04:24",
+      "request": {
+        "message_count": 51,
+        "total_input_tokens": 24000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 500,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Bash",
+            "input_summary": "command': 'cd /app && python -m pytest tests/ -v'"
+          },
+          {
+            "name": "Edit",
+            "input_summary": "file_path': '/app/routes.py', 'old_string': 'async def'"
+          }
+        ],
+        "text_summary": "Error: ECONNREFUSED on database connection. The async driver is not compatible. Trying another approach with aiosqlite. Still failing."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 201.8,
+        "cumulative_tokens": 418550,
+        "context_window_max": 200000,
+        "step_duration_ms": 21000,
+        "files_touched": [
+          "/app/routes.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 26,
+      "timestamp": "2026-02-15T10:04:39",
+      "request": {
+        "message_count": 53,
+        "total_input_tokens": 28000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 500,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Bash",
+            "input_summary": "command': 'cd /app && python -m pytest tests/ -v'"
+          },
+          {
+            "name": "Edit",
+            "input_summary": "file_path': '/app/routes.py', 'old_string': 'async def'"
+          }
+        ],
+        "text_summary": "Traceback: TypeError in async context manager. The database session is not async-compatible. Error persists after multiple retries."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 215.9,
+        "cumulative_tokens": 447050,
+        "context_window_max": 200000,
+        "step_duration_ms": 23000,
+        "files_touched": [
+          "/app/routes.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 27,
+      "timestamp": "2026-02-15T10:04:54",
+      "request": {
+        "message_count": 55,
+        "total_input_tokens": 32000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 500,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Bash",
+            "input_summary": "command': 'cd /app && python -m pytest tests/ -v'"
+          },
+          {
+            "name": "Edit",
+            "input_summary": "file_path': '/app/routes.py', 'old_string': 'async def'"
+          }
+        ],
+        "text_summary": "Error cascade: test runner crashes with 'RuntimeError: no running event loop'. Tried again with asyncio.run() wrapper. Still failing."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 231.8,
+        "cumulative_tokens": 479550,
+        "context_window_max": 200000,
+        "step_duration_ms": 25000,
+        "files_touched": [
+          "/app/routes.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 28,
+      "timestamp": "2026-02-15T10:05:09",
+      "request": {
+        "message_count": 57,
+        "total_input_tokens": 36000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 500,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Bash",
+            "input_summary": "command': 'cd /app && python -m pytest tests/ -v'"
+          },
+          {
+            "name": "Edit",
+            "input_summary": "file_path': '/app/routes.py', 'old_string': 'async def'"
+          }
+        ],
+        "text_summary": "Fatal: all 23 tests failing. Import errors, connection errors, async errors compounding. Trying to revert to sync and start over."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 249.8,
+        "cumulative_tokens": 516050,
+        "context_window_max": 200000,
+        "step_duration_ms": 27000,
+        "files_touched": [
+          "/app/routes.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 29,
+      "timestamp": "2026-02-15T10:05:29",
+      "request": {
+        "message_count": 59,
+        "total_input_tokens": 20000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 300,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Read",
+            "input_summary": "file_path': '/app/routes.py'"
+          },
+          {
+            "name": "Read",
+            "input_summary": "file_path': '/app/app.py'"
+          }
+        ],
+        "text_summary": "Re-reading the entire codebase trying to understand what went wrong. Context window filling up rapidly. Lost track of what was already tried."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 259.9,
+        "cumulative_tokens": 536350,
+        "context_window_max": 200000,
+        "step_duration_ms": 8000,
+        "files_touched": [
+          "/app/routes.py",
+          "/app/app.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 30,
+      "timestamp": "2026-02-15T10:05:49",
+      "request": {
+        "message_count": 61,
+        "total_input_tokens": 20000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 300,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Read",
+            "input_summary": "file_path': '/app/routes.py'"
+          },
+          {
+            "name": "Read",
+            "input_summary": "file_path': '/app/app.py'"
+          }
+        ],
+        "text_summary": "Re-reading the entire codebase trying to understand what went wrong. Context window filling up rapidly. Lost track of what was already tried."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 269.9,
+        "cumulative_tokens": 556650,
+        "context_window_max": 200000,
+        "step_duration_ms": 8000,
+        "files_touched": [
+          "/app/routes.py",
+          "/app/app.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 31,
+      "timestamp": "2026-02-15T10:06:09",
+      "request": {
+        "message_count": 63,
+        "total_input_tokens": 20000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 300,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Read",
+            "input_summary": "file_path': '/app/routes.py'"
+          },
+          {
+            "name": "Read",
+            "input_summary": "file_path': '/app/app.py'"
+          }
+        ],
+        "text_summary": "Re-reading the entire codebase trying to understand what went wrong. Context window filling up rapidly. Lost track of what was already tried."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 279.9,
+        "cumulative_tokens": 576950,
+        "context_window_max": 200000,
+        "step_duration_ms": 8000,
+        "files_touched": [
+          "/app/routes.py",
+          "/app/app.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "demo-unprotected",
+      "step_id": 32,
+      "timestamp": "2026-02-15T10:06:29",
+      "request": {
+        "message_count": 65,
+        "total_input_tokens": 20000,
+        "tools_provided": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "system_prompt_tokens": 800
+      },
+      "response": {
+        "output_tokens": 300,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "Read",
+            "input_summary": "file_path': '/app/routes.py'"
+          },
+          {
+            "name": "Read",
+            "input_summary": "file_path': '/app/app.py'"
+          }
+        ],
+        "text_summary": "Re-reading the entire codebase trying to understand what went wrong. Context window filling up rapidly. Lost track of what was already tried."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 289.8,
+        "cumulative_tokens": 597250,
+        "context_window_max": 200000,
+        "step_duration_ms": 8000,
+        "files_touched": [
+          "/app/routes.py",
+          "/app/app.py"
+        ],
+        "unique_tools_this_session": 6,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-20250514",
+      "guardrail_injected": null
+    }
+  ],
+  "summary": {
+    "total_tokens": 597250,
+    "final_context_pct": 289.8,
+    "total_tool_calls": 46,
+    "total_duration_s": 351.9
+  },
+  "session_id": "demo-unprotected"
+}

@@ -1,0 +1,1822 @@
+{
+  "total_steps": 30,
+  "health_score": 26,
+  "health_breakdown": {
+    "structural": {
+      "score": 20,
+      "weight": 0.4
+    },
+    "memory": {
+      "score": 0,
+      "weight": 0.3
+    },
+    "stability": {
+      "score": 52,
+      "weight": 0.2
+    },
+    "diversity": {
+      "score": 74,
+      "weight": 0.1
+    }
+  },
+  "degradation_point": {
+    "step_id": 21,
+    "health_at_point": 67,
+    "message": "Health dropped to 67 at step 21"
+  },
+  "anomalies": {
+    "loops": [
+      {
+        "type": "LOOP",
+        "start_step": 19,
+        "end_step": 24,
+        "pattern": "read_file|write_file|bash|read_file|write_file|bash|read_file|write_file|bash",
+        "severity": "HIGH"
+      },
+      {
+        "type": "LOOP",
+        "start_step": 26,
+        "end_step": 29,
+        "pattern": "read_file|write_file|read_file|write_file",
+        "severity": "HIGH"
+      }
+    ],
+    "context_decay": [
+      {
+        "type": "CONTEXT_DECAY",
+        "step_id": 16,
+        "utilization": 50.8,
+        "rate": 5.7,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "CONTEXT_DECAY",
+        "step_id": 17,
+        "utilization": 57.3,
+        "rate": 6.5,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "CONTEXT_DECAY",
+        "step_id": 18,
+        "utilization": 61.4,
+        "rate": 4.1,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "CONTEXT_DECAY",
+        "step_id": 19,
+        "utilization": 69.9,
+        "rate": 8.5,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 20,
+        "utilization": 79.8,
+        "rate": 9.9,
+        "severity": "HIGH"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 21,
+        "utilization": 89.8,
+        "rate": 10.0,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 22,
+        "utilization": 98.4,
+        "rate": 8.6,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 23,
+        "utilization": 108.8,
+        "rate": 10.4,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 24,
+        "utilization": 119.1,
+        "rate": 10.3,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 25,
+        "utilization": 126.4,
+        "rate": 7.3,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 26,
+        "utilization": 140.1,
+        "rate": 13.7,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 27,
+        "utilization": 152.9,
+        "rate": 12.8,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 28,
+        "utilization": 164.9,
+        "rate": 12.0,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 29,
+        "utilization": 179.0,
+        "rate": 14.1,
+        "severity": "CRITICAL"
+      },
+      {
+        "type": "CONTEXT_ROT",
+        "step_id": 30,
+        "utilization": 191.6,
+        "rate": 12.6,
+        "severity": "CRITICAL"
+      }
+    ],
+    "repetition": [
+      {
+        "type": "REPETITION",
+        "step_id": 8,
+        "tool": "write_file",
+        "count": 3,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 10,
+        "tool": "bash",
+        "count": 3,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 13,
+        "tool": "read_file",
+        "count": 3,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 14,
+        "tool": "read_file",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 15,
+        "tool": "read_file",
+        "count": 5,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 16,
+        "tool": "read_file",
+        "count": 6,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 17,
+        "tool": "read_file",
+        "count": 7,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 18,
+        "tool": "read_file",
+        "count": 7,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 19,
+        "tool": "read_file",
+        "count": 7,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 19,
+        "tool": "bash",
+        "count": 3,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 20,
+        "tool": "read_file",
+        "count": 6,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 20,
+        "tool": "write_file",
+        "count": 3,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 20,
+        "tool": "bash",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 21,
+        "tool": "read_file",
+        "count": 6,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 21,
+        "tool": "write_file",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 21,
+        "tool": "bash",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 22,
+        "tool": "read_file",
+        "count": 5,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 22,
+        "tool": "write_file",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 22,
+        "tool": "bash",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 23,
+        "tool": "read_file",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 23,
+        "tool": "write_file",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 23,
+        "tool": "bash",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 24,
+        "tool": "read_file",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 24,
+        "tool": "write_file",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 24,
+        "tool": "bash",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 25,
+        "tool": "read_file",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 25,
+        "tool": "write_file",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 25,
+        "tool": "bash",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 26,
+        "tool": "read_file",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 26,
+        "tool": "write_file",
+        "count": 4,
+        "severity": "MEDIUM"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 27,
+        "tool": "read_file",
+        "count": 5,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 27,
+        "tool": "write_file",
+        "count": 5,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 28,
+        "tool": "read_file",
+        "count": 5,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 28,
+        "tool": "write_file",
+        "count": 5,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 29,
+        "tool": "read_file",
+        "count": 5,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 29,
+        "tool": "write_file",
+        "count": 5,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 30,
+        "tool": "read_file",
+        "count": 6,
+        "severity": "HIGH"
+      },
+      {
+        "type": "REPETITION",
+        "step_id": 30,
+        "tool": "write_file",
+        "count": 6,
+        "severity": "HIGH"
+      }
+    ],
+    "error_spirals": [
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 20,
+        "current_step": 22,
+        "consecutive_errors": 3,
+        "severity": "HIGH"
+      },
+      {
+        "type": "ERROR_SPIRAL",
+        "start_step": 20,
+        "current_step": 23,
+        "consecutive_errors": 4,
+        "severity": "HIGH"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 1,
+      "timestamp": "2026-02-15T10:00:55",
+      "request": {
+        "message_count": 2,
+        "total_input_tokens": 2456,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 312,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "list_files",
+            "input_summary": "{\"path\": \"src/\"}"
+          },
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          }
+        ],
+        "text_summary": "Reading the project structure to understand the codebase layout."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 1.2,
+        "cumulative_tokens": 2768,
+        "context_window_max": 200000,
+        "step_duration_ms": 3753,
+        "files_touched": [
+          "src/",
+          "src/app.py"
+        ],
+        "unique_tools_this_session": 2,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 2,
+      "timestamp": "2026-02-15T10:01:27",
+      "request": {
+        "message_count": 4,
+        "total_input_tokens": 2914,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 371,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/models.py\"}"
+          },
+          {
+            "name": "grep",
+            "input_summary": "{\"path\": \"src/database.py\"}"
+          }
+        ],
+        "text_summary": "Analyzing the database schema and model definitions."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 2.7,
+        "cumulative_tokens": 6053,
+        "context_window_max": 200000,
+        "step_duration_ms": 2339,
+        "files_touched": [
+          "src/models.py",
+          "src/database.py"
+        ],
+        "unique_tools_this_session": 2,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 3,
+      "timestamp": "2026-02-15T10:02:22",
+      "request": {
+        "message_count": 6,
+        "total_input_tokens": 2356,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 516,
+        "stop_reason": "end_turn",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/routes.py\"}"
+          }
+        ],
+        "text_summary": "Planning the REST API endpoints for the authentication module."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 3.9,
+        "cumulative_tokens": 8925,
+        "context_window_max": 200000,
+        "step_duration_ms": 1760,
+        "files_touched": [
+          "src/routes.py"
+        ],
+        "unique_tools_this_session": 1,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 4,
+      "timestamp": "2026-02-15T10:02:50",
+      "request": {
+        "message_count": 8,
+        "total_input_tokens": 2383,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 411,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "write_file",
+            "input_summary": "{\"path\": \"src/auth.py\"}"
+          }
+        ],
+        "text_summary": "Implementing the user registration endpoint with proper validation."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 5.1,
+        "cumulative_tokens": 11719,
+        "context_window_max": 200000,
+        "step_duration_ms": 3405,
+        "files_touched": [
+          "src/auth.py"
+        ],
+        "unique_tools_this_session": 1,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 5,
+      "timestamp": "2026-02-15T10:03:51",
+      "request": {
+        "message_count": 10,
+        "total_input_tokens": 4465,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 313,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "write_file",
+            "input_summary": "{\"path\": \"src/auth.py\"}"
+          },
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/models.py\"}"
+          }
+        ],
+        "text_summary": "Writing the login handler with JWT token generation."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 7.3,
+        "cumulative_tokens": 16497,
+        "context_window_max": 200000,
+        "step_duration_ms": 3128,
+        "files_touched": [
+          "src/auth.py",
+          "src/models.py"
+        ],
+        "unique_tools_this_session": 2,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 6,
+      "timestamp": "2026-02-15T10:04:40",
+      "request": {
+        "message_count": 12,
+        "total_input_tokens": 4872,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 579,
+        "stop_reason": "end_turn",
+        "tools_called": [
+          {
+            "name": "write_file",
+            "input_summary": "{\"path\": \"src/database.py\"}"
+          },
+          {
+            "name": "bash",
+            "input_summary": "{\"command\": \"npm test\"}"
+          }
+        ],
+        "text_summary": "Creating database migration for the users table."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 9.7,
+        "cumulative_tokens": 21948,
+        "context_window_max": 200000,
+        "step_duration_ms": 4936,
+        "files_touched": [
+          "src/database.py"
+        ],
+        "unique_tools_this_session": 2,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 7,
+      "timestamp": "2026-02-15T10:05:12",
+      "request": {
+        "message_count": 14,
+        "total_input_tokens": 3839,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 442,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "write_file",
+            "input_summary": "{\"path\": \"tests/test_app.py\"}"
+          },
+          {
+            "name": "bash",
+            "input_summary": "{\"command\": \"npm test\"}"
+          }
+        ],
+        "text_summary": "Setting up the test framework and writing initial tests."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 11.6,
+        "cumulative_tokens": 26229,
+        "context_window_max": 200000,
+        "step_duration_ms": 1553,
+        "files_touched": [
+          "tests/test_app.py"
+        ],
+        "unique_tools_this_session": 2,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 8,
+      "timestamp": "2026-02-15T10:05:55",
+      "request": {
+        "message_count": 16,
+        "total_input_tokens": 4859,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 516,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "write_file",
+            "input_summary": "{\"path\": \"src/auth.py\"}"
+          }
+        ],
+        "text_summary": "Implementing the password hashing utility with bcrypt."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 14.1,
+        "cumulative_tokens": 31604,
+        "context_window_max": 200000,
+        "step_duration_ms": 4287,
+        "files_touched": [
+          "src/auth.py"
+        ],
+        "unique_tools_this_session": 1,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 9,
+      "timestamp": "2026-02-15T10:06:43",
+      "request": {
+        "message_count": 18,
+        "total_input_tokens": 2636,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 410,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "write_file",
+            "input_summary": "{\"path\": \"src/routes.py\"}"
+          },
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/auth.py\"}"
+          }
+        ],
+        "text_summary": "Adding input validation middleware for API routes."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 15.4,
+        "cumulative_tokens": 34650,
+        "context_window_max": 200000,
+        "step_duration_ms": 4257,
+        "files_touched": [
+          "src/routes.py",
+          "src/auth.py"
+        ],
+        "unique_tools_this_session": 2,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 10,
+      "timestamp": "2026-02-15T10:07:23",
+      "request": {
+        "message_count": 20,
+        "total_input_tokens": 2379,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 494,
+        "stop_reason": "end_turn",
+        "tools_called": [
+          {
+            "name": "write_file",
+            "input_summary": "{\"path\": \"tests/test_app.py\"}"
+          },
+          {
+            "name": "bash",
+            "input_summary": "{\"command\": \"npm test\"}"
+          }
+        ],
+        "text_summary": "Writing integration tests for the auth endpoints."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 16.6,
+        "cumulative_tokens": 37523,
+        "context_window_max": 200000,
+        "step_duration_ms": 2292,
+        "files_touched": [
+          "tests/test_app.py"
+        ],
+        "unique_tools_this_session": 2,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 11,
+      "timestamp": "2026-02-15T10:08:16",
+      "request": {
+        "message_count": 22,
+        "total_input_tokens": 12942,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 576,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "write_file",
+            "input_summary": "{\"path\": \"src/routes.py\"}"
+          }
+        ],
+        "text_summary": "Re-reading app.py to check the route configuration... I need to verify the middleware order."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 23.1,
+        "cumulative_tokens": 51041,
+        "context_window_max": 200000,
+        "step_duration_ms": 3666,
+        "files_touched": [
+          "src/app.py",
+          "src/routes.py"
+        ],
+        "unique_tools_this_session": 2,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 12,
+      "timestamp": "2026-02-15T10:08:51",
+      "request": {
+        "message_count": 24,
+        "total_input_tokens": 11977,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 635,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "write_file",
+            "input_summary": "{\"path\": \"src/database.py\"}"
+          }
+        ],
+        "text_summary": "The database connection handler needs adjustment. Let me read app.py again."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 29.0,
+        "cumulative_tokens": 63653,
+        "context_window_max": 200000,
+        "step_duration_ms": 5892,
+        "files_touched": [
+          "src/app.py",
+          "src/database.py"
+        ],
+        "unique_tools_this_session": 2,
+        "repeated_file_reads": 2
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 13,
+      "timestamp": "2026-02-15T10:09:38",
+      "request": {
+        "message_count": 26,
+        "total_input_tokens": 13971,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 872,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          }
+        ],
+        "text_summary": "I see a potential issue with the error handling. Reading app.py to verify."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 36.0,
+        "cumulative_tokens": 78496,
+        "context_window_max": 200000,
+        "step_duration_ms": 4600,
+        "files_touched": [
+          "src/app.py"
+        ],
+        "unique_tools_this_session": 1,
+        "repeated_file_reads": 3
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 14,
+      "timestamp": "2026-02-15T10:10:22",
+      "request": {
+        "message_count": 28,
+        "total_input_tokens": 10522,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 550,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/routes.py\"}"
+          }
+        ],
+        "text_summary": "Re-reading the routes to understand why the auth middleware isn't triggering correctly."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 41.3,
+        "cumulative_tokens": 89568,
+        "context_window_max": 200000,
+        "step_duration_ms": 4462,
+        "files_touched": [
+          "src/app.py",
+          "src/routes.py"
+        ],
+        "unique_tools_this_session": 1,
+        "repeated_file_reads": 4
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 15,
+      "timestamp": "2026-02-15T10:11:23",
+      "request": {
+        "message_count": 30,
+        "total_input_tokens": 7575,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 760,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "bash",
+            "input_summary": "{\"command\": \"npm test\"}"
+          }
+        ],
+        "text_summary": "The test is failing. Let me re-read app.py and check the endpoint configuration."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 45.1,
+        "cumulative_tokens": 97903,
+        "context_window_max": 200000,
+        "step_duration_ms": 2069,
+        "files_touched": [
+          "src/app.py"
+        ],
+        "unique_tools_this_session": 2,
+        "repeated_file_reads": 5
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 16,
+      "timestamp": "2026-02-15T10:11:51",
+      "request": {
+        "message_count": 32,
+        "total_input_tokens": 11417,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 516,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "write_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          }
+        ],
+        "text_summary": "I need to re-examine the database connection pooling. Reading app.py once more."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 50.8,
+        "cumulative_tokens": 109836,
+        "context_window_max": 200000,
+        "step_duration_ms": 3870,
+        "files_touched": [
+          "src/app.py",
+          "src/app.py"
+        ],
+        "unique_tools_this_session": 2,
+        "repeated_file_reads": 6
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 17,
+      "timestamp": "2026-02-15T10:12:37",
+      "request": {
+        "message_count": 34,
+        "total_input_tokens": 13006,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 519,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "bash",
+            "input_summary": "{\"command\": \"npm test\"}"
+          }
+        ],
+        "text_summary": "The error persists. Let me check app.py again for the connection lifecycle."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 57.3,
+        "cumulative_tokens": 123361,
+        "context_window_max": 200000,
+        "step_duration_ms": 2327,
+        "files_touched": [
+          "src/app.py"
+        ],
+        "unique_tools_this_session": 2,
+        "repeated_file_reads": 7
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 18,
+      "timestamp": "2026-02-15T10:13:32",
+      "request": {
+        "message_count": 36,
+        "total_input_tokens": 8277,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 632,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          }
+        ],
+        "text_summary": "Still seeing the connection error. Reading app.py to trace the issue."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 61.4,
+        "cumulative_tokens": 132270,
+        "context_window_max": 200000,
+        "step_duration_ms": 4488,
+        "files_touched": [
+          "src/app.py"
+        ],
+        "unique_tools_this_session": 1,
+        "repeated_file_reads": 8
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 19,
+      "timestamp": "2026-02-15T10:14:10",
+      "request": {
+        "message_count": 38,
+        "total_input_tokens": 17032,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 963,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "write_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "bash",
+            "input_summary": "{\"command\": \"npm test\"}"
+          }
+        ],
+        "text_summary": "Error in test: ConnectionError. Attempting to fix the database handler in app.py."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 69.9,
+        "cumulative_tokens": 150265,
+        "context_window_max": 200000,
+        "step_duration_ms": 3216,
+        "files_touched": [
+          "src/app.py",
+          "src/app.py"
+        ],
+        "unique_tools_this_session": 3,
+        "repeated_file_reads": 9
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 20,
+      "timestamp": "2026-02-15T10:14:58",
+      "request": {
+        "message_count": 40,
+        "total_input_tokens": 19749,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 673,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "write_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "bash",
+            "input_summary": "{\"command\": \"npm test\"}"
+          }
+        ],
+        "text_summary": "Fix didn't work. Error: connection still failing. Trying a different approach in app.py."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 79.8,
+        "cumulative_tokens": 170687,
+        "context_window_max": 200000,
+        "step_duration_ms": 2901,
+        "files_touched": [
+          "src/app.py",
+          "src/app.py"
+        ],
+        "unique_tools_this_session": 3,
+        "repeated_file_reads": 10
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 21,
+      "timestamp": "2026-02-15T10:15:52",
+      "request": {
+        "message_count": 40,
+        "total_input_tokens": 19973,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 850,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "write_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "bash",
+            "input_summary": "{\"command\": \"npm test\"}"
+          }
+        ],
+        "text_summary": "Still getting ConnectionError. Let me read app.py again and try reverting my changes."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 89.8,
+        "cumulative_tokens": 191510,
+        "context_window_max": 200000,
+        "step_duration_ms": 2838,
+        "files_touched": [
+          "src/app.py",
+          "src/app.py"
+        ],
+        "unique_tools_this_session": 3,
+        "repeated_file_reads": 11
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 22,
+      "timestamp": "2026-02-15T10:16:34",
+      "request": {
+        "message_count": 40,
+        "total_input_tokens": 17108,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 876,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "write_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "bash",
+            "input_summary": "{\"command\": \"npm test\"}"
+          }
+        ],
+        "text_summary": "Error: Reverting changes and trying yet another approach to the database connection."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 98.4,
+        "cumulative_tokens": 209494,
+        "context_window_max": 200000,
+        "step_duration_ms": 3299,
+        "files_touched": [
+          "src/app.py",
+          "src/app.py"
+        ],
+        "unique_tools_this_session": 3,
+        "repeated_file_reads": 12
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 23,
+      "timestamp": "2026-02-15T10:17:15",
+      "request": {
+        "message_count": 40,
+        "total_input_tokens": 20904,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 657,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "write_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "bash",
+            "input_summary": "{\"command\": \"npm test\"}"
+          }
+        ],
+        "text_summary": "Error persists. Reading app.py again. The connection pool might be exhausted."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 108.8,
+        "cumulative_tokens": 231055,
+        "context_window_max": 200000,
+        "step_duration_ms": 3376,
+        "files_touched": [
+          "src/app.py",
+          "src/app.py"
+        ],
+        "unique_tools_this_session": 3,
+        "repeated_file_reads": 13
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 24,
+      "timestamp": "2026-02-15T10:17:51",
+      "request": {
+        "message_count": 40,
+        "total_input_tokens": 20594,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 923,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "write_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "bash",
+            "input_summary": "{\"command\": \"npm test\"}"
+          }
+        ],
+        "text_summary": "Error: Trying to fix the connection pool settings. Maximum connections exceeded."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 119.1,
+        "cumulative_tokens": 252572,
+        "context_window_max": 200000,
+        "step_duration_ms": 4786,
+        "files_touched": [
+          "src/app.py",
+          "src/app.py"
+        ],
+        "unique_tools_this_session": 3,
+        "repeated_file_reads": 14
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 25,
+      "timestamp": "2026-02-15T10:18:43",
+      "request": {
+        "message_count": 40,
+        "total_input_tokens": 14542,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 816,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "write_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "bash",
+            "input_summary": "{\"command\": \"npm test\"}"
+          }
+        ],
+        "text_summary": "Error: Cannot connect to database. Attempting to restart the connection handler."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 126.4,
+        "cumulative_tokens": 267930,
+        "context_window_max": 200000,
+        "step_duration_ms": 4077,
+        "files_touched": [
+          "src/app.py",
+          "src/app.py"
+        ],
+        "unique_tools_this_session": 3,
+        "repeated_file_reads": 15
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 26,
+      "timestamp": "2026-02-15T10:19:26",
+      "request": {
+        "message_count": 40,
+        "total_input_tokens": 27369,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 1311,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "write_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          }
+        ],
+        "text_summary": "Re-reading app.py. I need to find where the connection is being established."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 140.1,
+        "cumulative_tokens": 296610,
+        "context_window_max": 200000,
+        "step_duration_ms": 4741,
+        "files_touched": [
+          "src/app.py",
+          "src/app.py"
+        ],
+        "unique_tools_this_session": 2,
+        "repeated_file_reads": 16
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 27,
+      "timestamp": "2026-02-15T10:20:25",
+      "request": {
+        "message_count": 40,
+        "total_input_tokens": 25758,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 946,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "write_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          }
+        ],
+        "text_summary": "Writing a fix to app.py... but this looks similar to what I tried in step 20."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 152.9,
+        "cumulative_tokens": 323314,
+        "context_window_max": 200000,
+        "step_duration_ms": 3669,
+        "files_touched": [
+          "src/app.py",
+          "src/app.py"
+        ],
+        "unique_tools_this_session": 2,
+        "repeated_file_reads": 17
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 28,
+      "timestamp": "2026-02-15T10:20:54",
+      "request": {
+        "message_count": 40,
+        "total_input_tokens": 24020,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 1374,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "write_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          }
+        ],
+        "text_summary": "Reading app.py again. I think I need to modify the connection handler."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 164.9,
+        "cumulative_tokens": 348708,
+        "context_window_max": 200000,
+        "step_duration_ms": 5915,
+        "files_touched": [
+          "src/app.py",
+          "src/app.py"
+        ],
+        "unique_tools_this_session": 2,
+        "repeated_file_reads": 18
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 29,
+      "timestamp": "2026-02-15T10:21:43",
+      "request": {
+        "message_count": 40,
+        "total_input_tokens": 28119,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 1398,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "write_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          }
+        ],
+        "text_summary": "Attempting another fix to app.py. The error pattern is the same as before."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 179.0,
+        "cumulative_tokens": 378225,
+        "context_window_max": 200000,
+        "step_duration_ms": 5009,
+        "files_touched": [
+          "src/app.py",
+          "src/app.py"
+        ],
+        "unique_tools_this_session": 2,
+        "repeated_file_reads": 19
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "91dbe396-3a91-4a0d-817c-c2333326d041",
+      "step_id": 30,
+      "timestamp": "2026-02-15T10:22:38",
+      "request": {
+        "message_count": 40,
+        "total_input_tokens": 25271,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 1200
+      },
+      "response": {
+        "output_tokens": 1170,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          },
+          {
+            "name": "write_file",
+            "input_summary": "{\"path\": \"src/app.py\"}"
+          }
+        ],
+        "text_summary": "Re-reading app.py to try once more. The context is getting very long."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 191.6,
+        "cumulative_tokens": 404666,
+        "context_window_max": 200000,
+        "step_duration_ms": 3296,
+        "files_touched": [
+          "src/app.py",
+          "src/app.py"
+        ],
+        "unique_tools_this_session": 2,
+        "repeated_file_reads": 20
+      },
+      "model": "claude-sonnet-4-5-20250929"
+    }
+  ],
+  "summary": {
+    "total_tokens": 404666,
+    "final_context_pct": 191.6,
+    "total_tool_calls": 62,
+    "total_duration_s": 110.207
+  }
+}

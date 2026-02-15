@@ -1,0 +1,128 @@
+{
+  "total_steps": 2,
+  "health_score": 100,
+  "health_breakdown": {
+    "structural": {
+      "score": 100,
+      "weight": 0.4
+    },
+    "memory": {
+      "score": 100,
+      "weight": 0.3
+    },
+    "stability": {
+      "score": 100,
+      "weight": 0.2
+    },
+    "diversity": {
+      "score": 100,
+      "weight": 0.1
+    }
+  },
+  "degradation_point": null,
+  "anomalies": {
+    "loops": [],
+    "context_decay": [],
+    "repetition": [],
+    "error_spirals": []
+  },
+  "steps": [
+    {
+      "schema_version": "1.0",
+      "session_id": "compare-protected-comp-e6a61e21",
+      "step_id": 1,
+      "timestamp": "2026-02-15T09:08:53.369866",
+      "request": {
+        "message_count": 1,
+        "total_input_tokens": 1137,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 199
+      },
+      "response": {
+        "output_tokens": 85,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "list_files",
+            "input_summary": "{'path': '.'}"
+          }
+        ],
+        "text_summary": "I'll build a comprehensive REST API with FastAPI that meets all your requirements. Let me start by exploring the current directory structure and then create the complete application."
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 0.6,
+        "cumulative_tokens": 1222,
+        "context_window_max": 200000,
+        "step_duration_ms": 5022,
+        "files_touched": [
+          "."
+        ],
+        "unique_tools_this_session": 1,
+        "repeated_file_reads": 0
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    },
+    {
+      "schema_version": "1.0",
+      "session_id": "compare-protected-comp-e6a61e21",
+      "step_id": 2,
+      "timestamp": "2026-02-15T09:08:55.361891",
+      "request": {
+        "message_count": 3,
+        "total_input_tokens": 1237,
+        "tools_provided": [
+          "read_file",
+          "write_file",
+          "bash",
+          "grep",
+          "list_files"
+        ],
+        "system_prompt_tokens": 199
+      },
+      "response": {
+        "output_tokens": 55,
+        "stop_reason": "tool_use",
+        "tools_called": [
+          {
+            "name": "read_file",
+            "input_summary": "{'path': 'README.md'}"
+          }
+        ],
+        "text_summary": ""
+      },
+      "trajectory_metrics": {
+        "context_utilization_pct": 1.2,
+        "cumulative_tokens": 2514,
+        "context_window_max": 200000,
+        "step_duration_ms": 1992,
+        "files_touched": [
+          "README.md"
+        ],
+        "unique_tools_this_session": 2,
+        "repeated_file_reads": 1
+      },
+      "model": "claude-sonnet-4-5-20250929",
+      "guardrail_injected": null
+    }
+  ],
+  "summary": {
+    "total_tokens": 2514,
+    "final_context_pct": 1.2,
+    "total_tool_calls": 2,
+    "total_duration_s": 7.014
+  },
+  "session_id": "compare-protected-comp-e6a61e21",
+  "optimizations_applied": {
+    "loop_detection": 0,
+    "error_spiral": 0,
+    "context_compacting": 0,
+    "tool_validation": 0
+  }
+}
