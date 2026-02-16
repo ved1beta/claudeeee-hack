@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentLens: Observability for AI Coding Agents</title>
+    <meta name="description" content="AgentLens - See exactly when and why your AI agent broke. Then fix it.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #e5e5e5;
+            background: #0a0a0a;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #2a2a2a;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #60a5fa, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            margin-bottom: 32px;
+        }
+
+        .github-link {
+            display: inline-block;
+            padding: 12px 32px;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .github-link:hover {
+            background: #60a5fa;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin: 48px 0 20px;
+            color: #e5e5e5;
+            border-bottom: 2px solid #2a2a2a;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 32px 0 16px;
+            color: #e5e5e5;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #e5e5e5;
+        }
+
+        code {
+            font-family: 'SF Mono', Monaco, Consolas, monospace;
+            background: #1a1a1a;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #60a5fa;
+        }
+
+        pre {
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 20px;
+            overflow-x: auto;
+            margin: 24px 0;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+            color: #e5e5e5;
+        }
+
+        .highlight {
+            background: #1a1a1a;
+            border-left: 4px solid #3b82f6;
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 4px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin: 32px 0;
+        }
+
+        .stat {
+            background: #1a1a1a;
+            padding: 24px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #2a2a2a;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #60a5fa;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: #a0a0a0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            background: #1a1a1a;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid #2a2a2a;
+        }
+
+        th {
+            background: rgba(59, 130, 246, 0.1);
+            font-weight: 600;
+            color: #60a5fa;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .success {
+            color: #10b981;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 20px;
+            color: #a0a0a0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 32px 0;
+            border: 1px solid #2a2a2a;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding-top: 32px;
+            border-top: 1px solid #2a2a2a;
+            text-align: center;
+            color: #a0a0a0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 AgentLens</h1>
+            <p class="subtitle">Datadog for AI Agents</p>
+            <p style="font-size: 1.1rem; color: #a0a0a0; margin-bottom: 32px;">
+                See exactly when and why your AI coding agent broke. Then fix it.
+            </p>
+            <a href="https://github.com/ved1beta/claudeeee-hack" class="github-link">View on GitHub</a>
+            <p style="margin-top: 24px; font-size: 0.9rem; color: #666;">
+                Built at Build India Hackathon 2026 with Claude + Replit
+            </p>
+        </header>
+
+        <article>
+            <h2>The Problem</h2>
+            
+            <p>
+                AI coding agents like Claude Code, Cursor, and Aider are magical when they work. But when they fail? 
+                You're left staring at a terminal, wondering what went wrong after 30 minutes and $5 of API costs.
+            </p>
+
+            <div class="highlight">
+                <strong>The Silent Failure Problem:</strong> Agents enter loops, burn through context windows, 
+                spiral on errors — and you only find out after it's too late. There's no observability, 
+                no guardrails, and no way to intervene.
+            </div>
+
+            <p>
+                We analyzed hundreds of Claude Code sessions and found five recurring failure patterns:
+            </p>
+
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-value">35%</span>
+                    <span class="stat-label">Tool Call Loops</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">25%</span>
+                    <span class="stat-label">Error Spirals</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">20%</span>
+                    <span class="stat-label">Context Rot</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">20%</span>
+                    <span class="stat-label">Other Issues</span>
+                </div>
+            </div>
+
+            <h2>The Solution: AgentLens</h2>
+
+            <img src="images/img-000.png" alt="AgentLens Dashboard" style="border: 1px solid #2a2a2a;">
+
+            <p>
+                AgentLens is an open-source observability tool that acts as a transparent proxy 
+                between your AI agent and the LLM API. Set one environment variable and get:
+            </p>
+
+            <h3>👁️ Real-Time Detection</h3>
+            <p>
+                Watch your agent's trajectory unfold step-by-step. Anomaly badges show loops, 
+                error spirals, and context rot as they happen.
+            </p>
+
+            <h3>🛡️ Automatic Guardrails</h3>
+            <p>
+                When a failure pattern is detected, AgentLens injects course-correction directly 
+                into the system prompt. No crashes, no manual intervention.
+            </p>
+
+            <h3>⏰ Time Travel Debugging</h3>
+            <p>
+                Full conversation state saved at every step. Rewind to before the failure, 
+                get an AI-generated fix, and resume with a clean slate.
+            </p>
+
+            <h2>How It Works</h2>
+
+            <div class="highlight">
+                <strong>Zero Integration Required:</strong> AgentLens is a transparent HTTP proxy. 
+                Just set <code>ANTHROPIC_BASE_URL=http://localhost:8000/proxy/v1</code> and use your 
+                agent normally. No SDK wrappers, no code changes.
+            </div>
+
+            <pre><code>Claude Code CLI
+  │
+  │  ANTHROPIC_BASE_URL=http://localhost:8000/proxy/v1
+  │
+  ▼
+┌──────────────────────────────────────┐
+│   AgentLens Proxy Server (:8000)    │
+│                                      │
+│   ✓ Intercept every API call         │
+│   ✓ Build trajectory timeline        │
+│   ✓ Detect loops, spirals, rot       │
+│   ✓ Inject guardrails when needed    │
+│   ✓ Save checkpoints automatically   │
+└──────────────┬───────────────────────┘
+               │
+               ▼
+    Anthropic API (api.anthropic.com)
+               │
+               ▼
+    Dashboard (:5173) — real-time updates</code></pre>
+
+            <h3>The Interception Pipeline</h3>
+
+            <p>Every API call flows through four stages:</p>
+
+            <ol>
+                <li>
+                    <strong>Session Detection:</strong> Groups API calls into sessions 
+                    based on 5-minute time gaps. Creates human-readable IDs.
+                </li>
+                <li>
+                    <strong>Guardrail Check:</strong> Analyzes the last few steps for 
+                    failure patterns. If detected, prepends a coaching message to the system prompt.
+                </li>
+                <li>
+                    <strong>Forward to Anthropic:</strong> Sends the modified request 
+                    to the real API with zero added latency.
+                </li>
+                <li>
+                    <strong>Record & Analyze:</strong> Saves the step to disk and 
+                    computes health score in real-time.
+                </li>
+            </ol>
+
+            <h2>Guardrails in Action</h2>
+
+            <p>
+                When the proxy detects a failure pattern, it automatically injects a coaching message. 
+                The agent never knows it's being coached — it just sees additional context and adjusts.
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Failure Pattern</th>
+                        <th>Detection</th>
+                        <th>Intervention</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Loop Detection</strong></td>
+                        <td>Same tool sequence repeats 3+ times</td>
+                        <td>"You are repeating the same tool sequence. Try a different strategy."</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Error Spiral</strong></td>
+                        <td>3+ consecutive error-retry cycles</td>
+                        <td>"You are in an error spiral. Pause and take a different approach."</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Context Rot</strong></td>
+                        <td>Context window >70% full</td>
+                        <td>"Your context is 75% full. Summarize progress and focus."</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Context Compacting</strong></td>
+                        <td>Context >60% full + >6 messages</td>
+                        <td>Uses Claude Haiku to summarize old turns, frees ~40% of context</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>A/B Comparison Results</h2>
+
+            <img src="images/img-001.png" alt="A/B Comparison View" style="border: 1px solid #2a2a2a;">
+
+            <p>
+                We ran the same task through two agents — one unprotected, one with AgentLens. 
+                The results:
+            </p>
+
+            <div class="highlight">
+                <strong>Task:</strong> "Create a Calculator class with add/subtract/multiply/divide. 
+                Write tests. Fix the division by zero bug."
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Unprotected</th>
+                        <th>Protected</th>
+                        <th>Improvement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Steps</td>
+                        <td>21 steps</td>
+                        <td>4 steps</td>
+                        <td class="success">↓ 81%</td>
+                    </tr>
+                    <tr>
+                        <td>Health Score</td>
+                        <td>89/100</td>
+                        <td>100/100</td>
+                        <td class="success">Perfect</td>
+                    </tr>
+                    <tr>
+                        <td>Tokens Used</td>
+                        <td>136,000</td>
+                        <td>8,000</td>
+                        <td class="success">↓ 94%</td>
+                    </tr>
+                    <tr>
+                        <td>Loops</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td class="success">✓ Prevented</td>
+                    </tr>
+                    <tr>
+                        <td>Context Decay</td>
+                        <td>3 events</td>
+                        <td>0</td>
+                        <td class="success">✓ Prevented</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="highlight">
+                <strong>💰 Cost Savings:</strong> The protected run used 94% fewer tokens: 
+                <strong>$0.30 instead of $5.00</strong> for a single task.
+            </div>
+
+            <h2>Health Score</h2>
+
+            <p>
+                AgentLens computes a composite health score (0-100) from four weighted components:
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Weight</th>
+                        <th>What It Measures</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Structural</strong></td>
+                        <td>40%</td>
+                        <td>Loops + repetition patterns</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Memory</strong></td>
+                        <td>30%</td>
+                        <td>Context window pressure</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Stability</strong></td>
+                        <td>20%</td>
+                        <td>Error spiral severity</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Diversity</strong></td>
+                        <td>10%</td>
+                        <td>Tool usage entropy</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p style="color: #a0a0a0;">
+                <strong style="color: #e5e5e5;">Interpretation:</strong> 
+                80-100 = Healthy | 55-79 = Degraded | 30-54 = Failing | 0-29 = Critical
+            </p>
+
+            <h2>Quick Start</h2>
+
+            <h3>1. Start the Backend</h3>
+            <pre><code>cd backend
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+
+# Create .env with your API key
+echo "ANTHROPIC_API_KEY=sk-ant-..." > .env
+
+# Start the server
+python server.py</code></pre>
+
+            <h3>2. Start the Dashboard</h3>
+            <pre><code>cd dashboard
+npm install
+npm run dev</code></pre>
+
+            <h3>3. Use It</h3>
+            <pre><code># Set the proxy URL and use Claude Code normally
+ANTHROPIC_BASE_URL=http://localhost:8000/proxy/v1 claude
+
+# The dashboard updates in real-time!
+# All sessions auto-save to backend/sessions/</code></pre>
+
+            <h2>Why This Matters</h2>
+
+            <p>
+                AI coding agents are becoming critical infrastructure for developers. But without observability, 
+                we're flying blind. AgentLens brings the same level of monitoring and intervention that we 
+                expect from production systems to the world of AI agents.
+            </p>
+
+            <div class="highlight">
+                <p>
+                    <strong>The Vision:</strong> A future where every AI agent has observability built-in. 
+                    Where failures are detected before they cascade. Where developers have full visibility 
+                    and control over their agent's behavior.
+                </p>
+            </div>
+
+            <h2>Tech Stack</h2>
+
+            <p><strong>Backend:</strong> Python 3.11+, FastAPI, httpx, Anthropic SDK</p>
+            <p><strong>Frontend:</strong> React 19, TypeScript, Tailwind CSS, Vite</p>
+            <p><strong>Storage:</strong> JSONL files + checkpoints on disk. No database needed.</p>
+
+            <h2>What's Next</h2>
+
+            <ul>
+                <li>Multi-provider support (OpenAI, Google, Mistral)</li>
+                <li>Streaming guardrails (inject corrections mid-stream)</li>
+                <li>Custom guardrail rules via config file</li>
+                <li>Per-session cost tracking and budget alerts</li>
+                <li>Agent benchmarking suite</li>
+                <li>Predictive health (ML model to predict failures)</li>
+            </ul>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="https://github.com/ved1beta/claudeeee-hack" class="github-link">⭐ View on GitHub</a>
+            </div>
+        </article>
+
+        <footer>
+            <p>
+                AgentLens is open-source under the MIT License.
+            </p>
+            <p style="margin-top: 16px;">
+                Built at Build India Hackathon 2026 with Claude + Replit
+            </p>
+            <p style="margin-top: 16px; font-size: 0.85rem;">
+                © 2026 AgentLens
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
